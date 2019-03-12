@@ -1,0 +1,46 @@
+{
+	"name": "vscode-liquid-snippets",
+	"version": "1.2.0",
+	"publisher": "killalau",
+	"displayName": "Shopify Liquid Template Snippets",
+	"description": "Shopify Liquid Template snippets",
+	"icon": "images/shopify-icon.png",
+	"galleryBanner": {
+		"color": "#30373b",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"snippets",
+		"liquid",
+		"shopify"
+	],
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"homepage": "https://github.com/killalau/vscode-liquid-snippets",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/killalau/vscode-liquid-snippets.git"
+	},
+	"bugs": "https://github.com/killalau/vscode-liquid-snippets/issues",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "liquid",
+				"path": "./snippets/liquid.json"
+			}
+		]
+	},
+	"extensionDependencies": [
+		"neilding.language-liquid"
+	],
+	"__metadata": {
+		"id": "39cefc2f-0175-44db-91f8-fe3230b4c3a1",
+		"publisherId": "9f8d5657-993d-4edb-905d-5cf4a5fe2b3c",
+		"publisherDisplayName": "Franky Lau"
+	}
+}

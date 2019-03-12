@@ -1,0 +1,10 @@
+{
+	"extension.liveshare.start.title": "コラボレーション セッションを開始する (共有)",
+	"extension.liveshare.join.title": "コラボレーション セッションに参加",
+	"extension.liveshare.end.title": "コラボレーション セッションの停止",
+	"extension.liveshare.searchContacts.title": "連絡先の検索",
+	"extension.liveshare.removeInvitedContactFromFileTreeExplorer.title": "招待済み連絡先を削除",
+	"extension.liveshare.removeInvitedContactFromActivityBar.title": "招待済み連絡先を削除",
+	"extension.liveshare.presence.description": "自分の状態を他のユーザーに公開するかどうか、またコラボレーション セッションでツール内の招待を許可するかどうかを制御します",
+	"extension.liveshare.selectPresenceProvider.title": "プレゼンスの構成"
+}

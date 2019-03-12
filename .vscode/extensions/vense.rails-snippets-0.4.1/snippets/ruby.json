@@ -1,0 +1,519 @@
+{
+	// Snippet
+	"only": {
+		"prefix": "only",
+		"body": "only: [:${1:func}]",
+		"description": "rails only function",
+		"scope": "meta.rails.routes"
+  },
+	"except": {
+		"prefix": "except",
+		"body": "except: [:${1:func}]",
+		"description": "rails except function",
+		"scope": "meta.rails.routes"
+  },
+	// Route
+	"route_Get": {
+		"prefix": "get",
+		"body": "get \"/${1:route}\", to: \"${2:controller}#${3:function}\"",
+		"description": "rails route get",
+		"scope": "meta.rails.routes"
+  },
+	"route_Post": {
+		"prefix": "post",
+		"body": "post \"/${1:route}\", to: \"${2:controller}#${3:function}\"",
+		"description": "rails route post",
+		"scope": "meta.rails.routes"
+  },
+	"route_Patch": {
+		"prefix": "patch",
+		"body": "patch \"/${1:route}\", to: \"${2:controller}#${3:function}\"",
+		"description": "rails route patch",
+		"scope": "meta.rails.routes"
+  },
+	"route_Put": {
+		"prefix": "put",
+		"body": "put \"/${1:route}\", to: \"${2:controller}#${3:function}\"",
+		"description": "rails route put",
+		"scope": "meta.rails.routes"
+  },
+	"route_Delete": {
+		"prefix": "delete",
+		"body": "delete \"/${1:route}\", to: \"${2:controller}#${3:function}\"",
+		"description": "rails route delete",
+		"scope": "meta.rails.routes"
+  },
+  "resources": {
+		"prefix": "res",
+		"body": "resources :${res_name}",
+		"description": "resources without a custom collection block",
+		"scope": "meta.rails.routes"
+  },
+	"resources_block": {
+		"prefix": "res_block",
+		"body": "resources :${1:res_name} do\n  $2\nend",
+		"description": "resources with an empty params block",
+		"scope": "meta.rails.routes"
+	},
+	"resources_collection": {
+		"prefix": "res_collection_block",
+		"body": "resources :${1:res_name} do\n  collection do\n    ${2:get} :${3:action}\n  end\n\nend",
+		"description": "resources with a custom collection block",
+		"scope": "meta.rails.routes"
+	},
+	"resources_member": {
+		"prefix": "res_member_block",
+		"body": "resources :${1:res_name} do\n  member do\n    ${2:get} :${3:action}\n  end\n\nend",
+		"description": "resources with a custom member block",
+		"scope": "meta.rails.routes"
+	},
+  "resource": {
+		"prefix": "re",
+		"body": "resource :${res_name}",
+		"description": "resource without a custom collection block",
+		"scope": "meta.rails.routes"
+	},
+	"resource_block": {
+		"prefix": "re_block",
+		"body": " :${1:res_name} do\n  $2\nend",
+		"description": "resource with an empty params block",
+		"scope": "meta.rails.routes"
+	},
+	"resource_collection": {
+		"prefix": "re_collection_block",
+		"body": "resource :${1:res_name} do\n  collection do\n    ${2:get} :${3:action}\n  end\n\nend",
+		"description": "resource with a custom collection block",
+		"scope": "meta.rails.routes"
+	},
+	"resource_member": {
+		"prefix": "re_member_block",
+		"body": "resource :${1:res_name} do\n  member do\n    ${2:get} :${3:action}\n  end\n\nend",
+		"description": "resource with a custom member block",
+		"scope": "meta.rails.routes"
+	},
+	"member": {
+		"prefix": "member_block",
+		"body": "member do\n    ${2:get} :${3:action}\nend\n",
+		"description": "member block",
+		"scope": "meta.rails.routes"
+	},
+	"collection": {
+		"prefix": "collection_block",
+		"body": "collection do\n    ${2:get} :${3:action}\nend\n",
+		"description": "collection block",
+		"scope": "meta.rails.routes"
+	},
+	// redirect function
+	"render": {
+		"prefix": "render",
+		"body": "render ${path}",
+		"description": "render path ",
+		"scope": "source.ruby.rails"
+	},
+	"redirect_to": {
+		"prefix": "redirect_to",
+		"body": "redirect_to ${path}",
+		"description": "redirect_to path ",
+		"scope": "source.ruby.rails"
+	},
+	"redirect_to_msg": {
+		"prefix": "redirect_to_msg",
+		"body": "redirect_to ${path}, notice: \"${msg}\"",
+		"description": "redirect_to path, notice: msg",
+		"scope": "source.ruby.rails"
+	},
+	// model
+	"dependent": {
+		"prefix": "dependent",
+		"body": "dependent: :${1:id}",
+		"description": "model dependent",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"add_column": {
+		"prefix": "add_column",
+		"body": "add_column :${1:table}, :${2:column}, :${3:type}",
+		"description": "add_column :table, :column, :type",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"add_reference": {
+		"prefix": "add_reference",
+		"body": "add_reference :${1:table}, :${2:column}, foreign_key: true",
+		"description": "add_reference :table, :column, foreign_key: true",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.binary(tcbi)": {
+		"prefix": "t.binary",
+		"body": "t.binary :",
+		"description": "Table column binary",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.boolean(tcb)": {
+		"prefix": "t.boolean",
+		"body": "t.boolean :",
+		"description": "Table column boolean",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.date(tcda)": {
+		"prefix": "t.date",
+		"body": "t.date :",
+		"description": "Table column date",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.datetime(tcdt)": {
+		"prefix": "t.datetime",
+		"body": "t.datetime :",
+		"description": "Table column datetime",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.decimal(tcd)": {
+		"prefix": "t.decimal",
+		"body": "t.decimal :",
+		"description": "Table column decimal",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.float(tcf)": {
+		"prefix": "t.float",
+		"body": "t.float :",
+		"description": "Table column float",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.integer(tci)": {
+		"prefix": "t.integer",
+		"body": "t.integer :",
+		"description": "Table column integer",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.references(tcr)": {
+		"prefix": "t.references",
+		"body": "t.references :",
+		"description": "Table column(s) references",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.string(tcs)": {
+		"prefix": "t.string",
+		"body": "t.string :",
+		"description": "Table column string",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.text(tct)": {
+		"prefix": "t.text",
+		"body": "t.text :",
+		"description": "Table column text",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.time(tcti)": {
+		"prefix": "t.time",
+		"body": "t.time :",
+		"description": "Table column time",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.timestamp(tcts)": {
+		"prefix": "t.timestamp",
+		"body": "t.timestamp :",
+		"description": "Table column timestamp",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"t.timestamps(tctss)": {
+		"prefix": "t.timestamps",
+		"body": "t.timestamps\n$0",
+		"description": "Table column timestamps",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcbi": {
+		"prefix": "tcbi",
+		"body": "t.binary :",
+		"description": "Table column binary",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcb": {
+		"prefix": "tcb",
+		"body": "t.boolean :",
+		"description": "Table column boolean",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcda": {
+		"prefix": "tcda",
+		"body": "t.date :",
+		"description": "Table column date",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcdt": {
+		"prefix": "tcdt",
+		"body": "t.datetime :",
+		"description": "Table column datetime",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcd": {
+		"prefix": "tcd",
+		"body": "t.decimal :",
+		"description": "Table column decimal",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcf": {
+		"prefix": "tcf",
+		"body": "t.float :",
+		"description": "Table column float",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tci": {
+		"prefix": "tci",
+		"body": "t.integer :",
+		"description": "Table column integer",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcr": {
+		"prefix": "tcr",
+		"body": "t.references :",
+		"description": "Table column(s) references",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcs": {
+		"prefix": "tcs",
+		"body": "t.string :",
+		"description": "Table column string",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tct": {
+		"prefix": "tct",
+		"body": "t.text :",
+		"description": "Table column text",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcti": {
+		"prefix": "tcti",
+		"body": "t.time :",
+		"description": "Table column time",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tcts": {
+		"prefix": "tcts",
+		"body": "t.timestamp :",
+		"description": "Table column timestamp",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"tctss": {
+		"prefix": "tctss",
+		"body": "t.timestamps\n$0",
+		"description": "Table column timestamps",
+		"scope": "meta.rails.migration.create_table, meta.rails.migration.change_table"
+	},
+	"has_one": {
+		"prefix": "has_one",
+		"body": "has_one :",
+		"description": "has_one :",
+		"scope": "source.ruby.rails"
+	},
+	"has_one_dependent": {
+		"prefix": "has_one_dependent",
+		"body": "has_one :${1:id}, dependent: :${2:type}",
+		"description": "has_one :id, dependent: :type",
+		"scope": "source.ruby.rails"
+	},
+	"has_many": {
+		"prefix": "has_many",
+		"body": "has_many :",
+		"description": "has_many :",
+		"scope": "source.ruby.rails"
+	},
+	"has_many_through": {
+		"prefix": "has_many_through",
+		"body": "has_many :${1:model1}, through: :${2:model2}",
+		"description": "has_many :model1, through: :model2",
+		"scope": "source.ruby.rails"
+	},
+	"has_many_dependent": {
+		"prefix": "has_many_dependent",
+		"body": "has_many :${1:id}, dependent: :${2:type}",
+		"description": "has_many :id, dependent: :type",
+		"scope": "source.ruby.rails"
+	},
+	"belongs_to": {
+		"prefix": "belongs_to",
+		"body": "belongs_to :",
+		"description": "belongs_to :",
+		"scope": "source.ruby.rails"
+	},
+	"belongs_to_cache": {
+		"prefix": "belongs_to_cache",
+		"body": "belongs_to :${1:id}, cache: ${2:true}",
+		"description": "belongs_to :id, cache: true",
+		"scope": "source.ruby.rails"
+	},
+	"has_and_belongs_to_many(habtm)": {
+		"prefix": "has_and_belongs_to_many",
+		"body": "has_and_belongs_to_many :${1:id}",
+		"description": "has_and_belongs_to_many :id",
+		"scope": "source.ruby.rails"
+	},
+	"habtm": {
+		"prefix": "habtm",
+		"body": "has_and_belongs_to_many :${1:id}",
+		"description": "has_and_belongs_to_many :id",
+		"scope": "source.ruby.rails"
+	},
+	// Params process
+	"params": {
+		"prefix": "params",
+		"body": "params.require(:${1:id_name}).permit(:${2:variable})",
+		"description": "params.require(:id_name).permit(:variable)",
+		"scope": "source.ruby"
+	},
+	"require": {
+		"prefix": "require",
+		"body": "require(:$1)$2",
+		"description": "require(:id)",
+		"scope": "source.ruby"
+	},
+	"permit": {
+		"prefix": "permit",
+		"body": "permit(:$1)$2",
+		"description": "permit(:id)",
+		"scope": "source.ruby"
+	},
+	"validates": {
+		"prefix": "validates",
+		"body": "validates :${1:column}, presence: true",
+		"description": "validates :column, presence: true",
+		"scope": "source.ruby"
+	},
+	// Controller
+	"controller": {
+		"prefix": "controller",
+		"body": "class ${1:name}Controller < ApplicationController\n  $2\nend",
+		"description": "class Controller",
+		"scope": "source.ruby"
+	},
+	"index": {
+		"prefix": "index",
+		"body": "def index\n  $1\nend",
+		"description": "Function index",
+		"scope": "source.ruby"
+	},
+	"create": {
+		"prefix": "create",
+		"body": "def create\n  $1\nend",
+		"description": "Function create",
+		"scope": "source.ruby"
+	},
+	"new": {
+		"prefix": "new",
+		"body": "def new\n  $1\nend",
+		"description": "Function new",
+		"scope": "source.ruby"
+	},
+	"edit": {
+		"prefix": "edit",
+		"body": "def edit\n  $1\nend",
+		"description": "Function edit",
+		"scope": "source.ruby"
+	},
+	"show": {
+		"prefix": "show",
+		"body": "def show\n  $1\nend",
+		"description": "Function show",
+		"scope": "source.ruby"
+	},
+	"update": {
+		"prefix": "update",
+		"body": "def update\n  $1\nend",
+		"description": "Function update",
+		"scope": "source.ruby"
+	},
+	"destroy": {
+		"prefix": "destroy",
+		"body": "def destroy\n  $1\nend",
+		"description": "Function destroy",
+		"scope": "source.ruby"
+	},
+	"CRUD": {
+		"prefix": "CRUD",
+		"body": "def index\n  \nend\n\ndef new\n  \nend\n\ndef create\n  \nend\n\ndef edit\n  \nend\n\ndef update\n  \nend\n\ndef show\n  \nend\n\ndef destroy\n  \nend",
+		"description": "CRUD Function",
+		"scope": "source.ruby"
+	},
+	"before_action(ba)": {
+		"prefix": "before_action",
+		"body": "before_action :${1:id}",
+		"description": "before action",
+		"scope": "source.ruby"
+	},
+	"before_action": {
+		"prefix": "ba",
+		"body": "before_action :${1:id}",
+		"description": "before action",
+		"scope": "source.ruby"
+	},
+	// Other
+	"do": {
+		"prefix": "do",
+		"body": "do\n  $2\nend",
+		"description": "do block",
+		"scope": "source.ruby"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "if $1 \n  $2\nend",
+		"description": "if block",
+		"scope": "source.ruby"
+	},
+	"if else": {
+		"prefix": "if else",
+		"body": "if $1\n  $2\nelse\n  $3\nend",
+		"description": "if else block",
+		"scope": "source.ruby"
+	},
+	"if elsif": {
+		"prefix": "if elsif",
+		"body": "if $1\n  $2\nelsif $3\n  $4\nend",
+		"description": "if elsif block",
+		"scope": "source.ruby"
+	},
+	"if elsif else": {
+		"prefix": "if elsif else",
+		"body": "if $1\n  $2\nelsif $3\n  $4\nelse\n  $5\nend",
+		"description": "if elsif else block",
+		"scope": "source.ruby"
+	},
+	"first": {
+		"prefix": "first",
+		"body": "first(${quantity})",
+		"description": "first(quantity)",
+		"scope": "source.ruby"
+	},
+	"find_by": {
+		"prefix": "find_by",
+		"body": "find_by(${1:id_name}: params[:${2:param}])",
+		"description": "find_by(id_name: params[:param])",
+		"scope": "source.ruby"
+	},
+	"where": {
+		"prefix": "where",
+		"body": "where(${condition})",
+		"description": "where(condition)",
+		"scope": "source.ruby"
+	},
+	"increment": {
+		"prefix": "increment",
+		"body": "increment(:${1:id})",
+		"description": "increment(:id)",
+		"scope": "source.ruby"
+	},
+	"order": {
+		"prefix": "order",
+		"body": "order(${1:id}: :${2:desc})",
+		"description": "order(id: :desc)",
+		"scope": "source.ruby"
+	},
+	"limit": {
+		"prefix": "limit",
+		"body": "limit(${quantity})",
+		"description": "limit(quantity)",
+		"scope": "source.ruby"
+	},
+	"def": {
+		"prefix": "def",
+		"body": "def ${1:name}\n  $2\nend",
+		"description": "def",
+		"scope": "source.ruby"
+	}
+}

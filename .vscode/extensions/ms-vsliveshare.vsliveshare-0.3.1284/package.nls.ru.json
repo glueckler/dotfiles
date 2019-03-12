@@ -1,0 +1,10 @@
+{
+	"extension.liveshare.start.title": "Начать сеанс совместной работы (общий)",
+	"extension.liveshare.join.title": "Присоединиться к сеансу совместной работы",
+	"extension.liveshare.end.title": "Остановить сеанс совместной работы",
+	"extension.liveshare.searchContacts.title": "Поиск контактов",
+	"extension.liveshare.removeInvitedContactFromFileTreeExplorer.title": "Удалить приглашенный контакт",
+	"extension.liveshare.removeInvitedContactFromActivityBar.title": "Удалить приглашенный контакт",
+	"extension.liveshare.presence.description": "Определяет, следует ли сообщать о вашем присутствии другим пользователям, и разрешает отправку внутренних приглашений для сеансов совместной работы",
+	"extension.liveshare.selectPresenceProvider.title": "Настройка параметров присутствия"
+}

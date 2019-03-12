@@ -1,0 +1,64 @@
+{
+	"name": "htmlescape-vscode-extension",
+	"displayName": "Escape HTML code",
+	"description": "Allows you to quickly convert HTML/JS/CSS code for publication on a blog.",
+	"version": "0.0.6",
+	"publisher": "raymondcamden",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/cfjedimaster/htmlescape-vscode/issues",
+		"email": "raymondcamden@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cfjedimaster/htmlescape-vscode.git"
+	},
+	"homepage": "https://github.com/cfjedimaster/htmlescape-vscode/blob/master/README.md",
+	"categories": [
+		"Other"
+	],
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"activationEvents": [
+		"onCommand:extension.showHtmlEscape"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.showHtmlEscape",
+				"title": "Show Escaped HTML"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "extension.showHtmlEscape",
+					"when": "editorIsOpen"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/node": "^8.10.25",
+		"tslint": "^5.11.0",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.22"
+	},
+	"dependencies": {
+		"@types/escape-html": "0.0.20",
+		"escape-html": "^1.0.3"
+	},
+	"__metadata": {
+		"id": "c98d1637-28ab-4a87-a071-efcdcd3b3fdd",
+		"publisherId": "7483a41b-963b-44b4-98f8-5cace52cdb21",
+		"publisherDisplayName": "Raymond Camden"
+	}
+}

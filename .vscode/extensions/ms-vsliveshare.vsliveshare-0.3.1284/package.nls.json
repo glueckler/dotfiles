@@ -1,0 +1,10 @@
+{
+"extension.liveshare.start.title":"Start Collaboration Session (Share)",
+"extension.liveshare.join.title":"Join Collaboration Session",
+"extension.liveshare.end.title":"Stop Collaboration Session",
+"extension.liveshare.searchContacts.title":"Search Contacts",
+"extension.liveshare.removeInvitedContactFromFileTreeExplorer.title":"Remove Invited Contact",
+"extension.liveshare.removeInvitedContactFromActivityBar.title":"Remove Invited Contact",
+"extension.liveshare.presence.description":"Controls whether to publish your presence to other users, and allow in-tool invites for collaboration sessions",
+"extension.liveshare.selectPresenceProvider.title":"Configure Presence"
+}

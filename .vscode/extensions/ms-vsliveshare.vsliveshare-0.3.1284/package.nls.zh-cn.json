@@ -1,0 +1,10 @@
+{
+	"extension.liveshare.start.title": "开始协作会话(共享)",
+	"extension.liveshare.join.title": "加入协作会话",
+	"extension.liveshare.end.title": "停止协作会话",
+	"extension.liveshare.searchContacts.title": "搜索联系人",
+	"extension.liveshare.removeInvitedContactFromFileTreeExplorer.title": "移除已被邀请的联系人",
+	"extension.liveshare.removeInvitedContactFromActivityBar.title": "移除已被邀请的联系人",
+	"extension.liveshare.presence.description": "控制是否将你的忙闲状态发布给其他用户，并允许在工具内邀请进行协作会话",
+	"extension.liveshare.selectPresenceProvider.title": "配置状态"
+}

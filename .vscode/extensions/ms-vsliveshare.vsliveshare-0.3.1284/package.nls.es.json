@@ -1,0 +1,10 @@
+{
+	"extension.liveshare.start.title": "Iniciar sesión de colaboración (compartir)",
+	"extension.liveshare.join.title": "Únete a la sesión de colaboración",
+	"extension.liveshare.end.title": "Detener la sesión de colaboración",
+	"extension.liveshare.searchContacts.title": "Búsqueda de contactos",
+	"extension.liveshare.removeInvitedContactFromFileTreeExplorer.title": "Eliminar contacto invitado",
+	"extension.liveshare.removeInvitedContactFromActivityBar.title": "Eliminar contacto invitado",
+	"extension.liveshare.presence.description": "Controla si va a hacer pública su presencia a otros usuarios y permite la participación de los invitados en la herramienta a las sesiones de colaboración",
+	"extension.liveshare.selectPresenceProvider.title": "Configurar la presencia"
+}
