@@ -10,20 +10,34 @@ alias gsweep="git reset --hard && git clean -df"
 alias gpld="git checkout develop && ggpull"
 alias gmd="git merge develop"
 
+# makeshift alias from nathan
+alias brails="bundle exec rails"
+alias brake="bundle exec rake"
+alias bspec="bundle exec rspec"
+# for dropping database and recreating and reseeding
+alias dbreset="bundle exec rake db:drop && bundle exec rake db:create && bundle exec rake db:migrate && bundle exec rake db:seed &"
+# something to do with ports
+export MAKESHIFTPATH=$HOME/asdf/makeshift-web
+alias makeshift_id="cd $MAKESHIFTPATH/makeshift-id && bundle exec rails s -p 3020"
+alias makeshift_hr="cd $MAKESHIFTPATH/makeshift-hr && bundle exec rails s -p 3010"
+alias makeshift_ew="cd $MAKESHIFTPATH/makeshift-employee-web && bundle exec middleman server"
+
 # hidden files aliases
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 function ~~ () {
-    cd /Users/slimbean/Desktop/$1
+    cd /Users/$(whoami)/Desktop/$1
     ls
 }
+
+# ----- ----- ----- ----- -----
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/dbean/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 ZSH_THEME="glueckler"
@@ -73,3 +87,15 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# ----- ----- ----- ----- ----- ----- 
+
+# Machine specific config
+
+# run rbenv at startup
+eval "$(rbenv init -)"
+
+# add libpq to path for psql
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+
