@@ -90,12 +90,4 @@ source $ZSH/oh-my-zsh.sh
 
 # ----- ----- ----- ----- ----- ----- 
 
-# Machine specific config
-
-# run rbenv at startup
-eval "$(rbenv init -)"
-
-# add libpq to path for psql
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-
-
+# Machine specific config..
